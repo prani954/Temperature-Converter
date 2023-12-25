@@ -4,9 +4,9 @@ TEMPERATURE CONVERTER
    git clone https://github.com/prani954/Temperature-Converter.git
    
 Features:
-1. Convert temperatures from Celsius to Fahrenheit.
-2. Convert temperatures from Fahrenheit to Celsius.
-3. Display corresponding images based on the converted temperature.
+1. Convert temperature from Celsius to Fahrenheit.
+2. Convert temperature from Fahrenheit to Celsius.
+3. Display corresponding images based on the Fahrenheit range.
 
 Technologies Used:
 1. HTML

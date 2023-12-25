@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+    --primary-color:rgb(243, 248, 253);
+    --secondary-color:rgb(205, 230, 252);
+}
+*{
+    margin:0;
+    border:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+#cont{
+    background-image: linear-gradient(to bottom right, var(--primary-color),rgb(224, 235, 249), var(--primary-color));
+    height:100vh;
+}
+#hi{
+    position:absolute;
+    font-size: larger;
+    margin:110px 0 0 20px;
+}
+#nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#marq{
+--f: 10px; /* control the folded part*/
+--r: 15px; /* control the ribbon shape */
+--t: 10px; /* the top offset */
+inset: var(--t) calc(0.2*var(--f)) auto auto;
+padding: 10px 10px var(--r) calc(10px + var(--r));
+clip-path: 
+    polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+    calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
+    var(--r) calc(50% - var(--f)/2));
+box-shadow: 0 calc(-1*var(--f)) 0 inset var(--secondary-color);
+background-color: rgba(163, 212, 255, 0.824);
+color:black;
+width:300px;
+margin:20px 0;
+position: absolute;
+font-weight: bold;
+}
+#paraF,#paraC{
+    color:rgb(25, 148, 255);
+}
+#temp{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap:wrap;
+margin:auto;
+height:90vh;
+}
+#CtoF,#FtoC{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin:0 40px;
+    box-shadow: 2px 2px 2px rgb(175, 182, 190);
+    padding:40px 20px;
+    border-radius: 10px;
+}
+#convertF,#convertC{
+    padding:0.5rem;
+    border-radius: 8px;
+    border:1px solid var(--secondary-color);
+    color:rgb(79, 80, 81)
+}
+#degC,#degF{
+    margin:20px;
+    border-radius: 5px;
+    padding:0.5rem;
+    background-color:var(--primary-color) ;
+}
+button{
+    cursor:pointer;
+    transition:all 0.2s ease-in-out;
+    background-color: var(--primary-color);
+}
+#reset{
+    width:150px;
+    padding:10px;
+    text-align: center;
+    border-radius:10px;
+    left:45%;
+    position:absolute;
+    border:1px solid var(--secondary-color);
+}
+button:hover{
+    scale:0.9;
+}
+@media only screen and (max-width:810px){
+    #hi{
+        font-size:medium;
+        width:50%;
+    }
+    #CtoF{
+      align-self: last baseline; 
+      margin-top:10%; 
+    }
+}
+@media only screen and (max-width:685px){
+    #hi{
+        font-size:small;
+        width:30%;
+    }
+    #temp{
+        padding:0px 40px;
+    }
+    #CtoF{
+        align-self:last baseline;
+        margin-top:15%; 
+    }
+    #reset{
+        margin-left:-50px;
+    }
+}
+@media only screen and (max-width:470px){
+#hi{
+    align-self:first baseline;
+    font-size: smaller;
+    width:400px;
+    margin-top: 25%;
+}
+}

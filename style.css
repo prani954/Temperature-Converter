@@ -63,7 +63,7 @@ height:90vh;
     padding:40px 20px;
     border-radius: 10px;
 }
-#convertF,#convertC{
+#con-far,#con-cel{
     padding:0.5rem;
     border-radius: 8px;
     border:1px solid var(--secondary-color);

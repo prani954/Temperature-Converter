@@ -5,8 +5,6 @@ const degC = document.querySelector('#degC')
 const degF = document.querySelector('#degF')
 const conc = document.getElementById('con-cel')
 const conf = document.getElementById('con-far')
-const convF = document.querySelector('#convertF')
-const convC = document.querySelector('#convertC')
 const err = document.querySelector('#err')
 const image = document.querySelector('#temp-img')
 const errn = document.querySelector('#errn')
@@ -47,10 +45,11 @@ function clearN(ele1,ele2){
     ele2.innerText = ''
 }
 function clear(ele1,ele2){
-    ele1.innerHTML = ''
+    ele1.value = ''
     ele2.innerHTML = ''
 }
-convF.addEventListener('click',()=>{
+degC.addEventListener('input',()=>{
+    conf.value=''
     let cel = degC.value.trim()
     if(cel==='')
     {
@@ -67,11 +66,12 @@ convF.addEventListener('click',()=>{
     else{
         err.innerText = ''
         celFar = (9/5)*(celNum)+32;
-        conf.innerHTML = celFar+" &deg;F";
+        conf.value = celFar+" F";
         changeImage(image,parseInt(celFar))
     }
 })
-convC.addEventListener('click',()=>{
+degF.addEventListener('input',()=>{
+    conc.value=''
     let far = degF.value.trim()
     if(far==='')
     {
@@ -88,7 +88,7 @@ convC.addEventListener('click',()=>{
     else{
         errn.innerText = ''
         farCel = (5/9)*(farNum-32)
-        conc.innerHTML = farCel+" &deg;C";
+        conc.value= farCel+"C";
         changeImage(imagen,parseInt(farNum))
     }
 })

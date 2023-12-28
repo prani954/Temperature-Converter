@@ -1,7 +1,4 @@
 **TEMPERATURE** **CONVERTER**
-
-1. To Clone the repository:
-   git clone https://github.com/prani954/Temperature-Converter.git
    
 **Features:**
 1. Convert temperature from Celsius to Fahrenheit.
